@@ -7,6 +7,22 @@ using namespace std;
 int isSelfReferential(int a[ ], int len)
 {
   bool isSelf=true;
+  int intCount[len];
+  int count=0;
+  for (int i=0;i<len;i++)
+  {
+    count=0;
+    for (int j=0;j<len;j++)
+    {
+      if ( i==a[j])
+        count++;
+    }
+    if ( count!=a[i])
+    {
+      isSelf=false;
+      return 0;
+    }
+  }
   if (isSelf)
     return 1;
   else
@@ -14,25 +30,28 @@ int isSelfReferential(int a[ ], int len)
 }
 int main() 
 {
-  int a[] ={1, 2, 1, 0} ;//1 7 is the smallest prime in the array and there are 7 primes
+  int a[] ={1, 2, 1, 0} ;
   cout<<isSelfReferential(a,sizeof(a)/sizeof(int))<<endl;
 
-  int b[]={2, 0, 2, 0};//1 3 is the smallest prime but there are 4 primes in the array
+  int b[]={2, 0, 2, 0};
   cout<<isSelfReferential(b,sizeof(b)/sizeof(int))<<endl;
 
-  int c[]={2, 1, 2, 0, 0};//0 the array must contain at least one prime
+  int c[]={2, 1, 2, 0, 0};
   cout<<isSelfReferential(c,sizeof(c)/sizeof(int))<<endl;
 
-  int d[]={3, 2, 1, 1, 0, 0, 0};//0 3 is the smallest prime but there is only 1 prime in the array
+  int d[]={3, 2, 1, 1, 0, 0, 0};
   cout<<isSelfReferential(d,sizeof(d)/sizeof(int))<<endl;
 
-  int e[]={4, 2, 1, 0, 1, 0, 0, 0};//1 3 is the smallest prime and there are 3 primes in the array
+  int e[]={4, 2, 1, 0, 1, 0, 0, 0};
   cout<<isSelfReferential(e,sizeof(e)/sizeof(int))<<endl;
 
-  int f[]={5, 2, 1, 0, 0, 1, 0, 0, 0};//0 the array must contain at least one prime.
+  int f[]={5, 2, 1, 0, 0, 1, 0, 0, 0};
   cout<<isSelfReferential(f,sizeof(f)/sizeof(int))<<endl;
 
-  int g[]={6, 2, 1, 0, 0, 0, 1, 0, 0, 0};//0 the array must contain at least one prime.
+  int g[]={6, 2, 1, 0, 0, 0, 1, 0, 0, 0};
   cout<<isSelfReferential(g,sizeof(g)/sizeof(int))<<endl;
+
+  int h[]={6, 2, 1, 0, 0, 0, 1, 0, 1, 0};
+  cout<<isSelfReferential(h,sizeof(h)/sizeof(int))<<endl;
   return 0;
 }
