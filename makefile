@@ -1,5 +1,5 @@
-OBJECTS = n_upcount.exe
-LOCFLAGS = -I../n_upcount
+OBJECTS = self_referential.exe
+LOCFLAGS = -I../self_referential
 CC = g++
 CCFLAGS = -ansi -W -Wall -lstdc++
 LOCFLAGS =

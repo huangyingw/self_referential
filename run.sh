@@ -1,2 +1,2 @@
 make -B \
-&& ./n_upcount.exe
+&& ./self_referential.exe
