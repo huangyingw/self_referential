@@ -6,7 +6,6 @@ using namespace std;
 
 int isSelfReferential(int a[ ], int len)
 {
-  bool isSelf=true;
   for (int i=0;i<len;i++)
   {
     int count=0;
@@ -20,10 +19,7 @@ int isSelfReferential(int a[ ], int len)
       return 0;
     }
   }
-  if (isSelf)
-    return 1;
-  else
-    return 0;
+  return 1;
 }
 int main() 
 {
