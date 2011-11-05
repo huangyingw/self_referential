@@ -53,5 +53,15 @@ int main()
 
   int h[]={6, 2, 1, 0, 0, 0, 1, 0, 1, 0};
   cout<<isSelfReferential(h,sizeof(h)/sizeof(int))<<endl;
+  /*
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   0
+   */
   return 0;
 }
