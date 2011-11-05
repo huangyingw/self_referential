@@ -7,11 +7,9 @@ using namespace std;
 int isSelfReferential(int a[ ], int len)
 {
   bool isSelf=true;
-  int intCount[len];
-  int count=0;
   for (int i=0;i<len;i++)
   {
-    count=0;
+    int count=0;
     for (int j=0;j<len;j++)
     {
       if ( i==a[j])
@@ -19,7 +17,6 @@ int isSelfReferential(int a[ ], int len)
     }
     if ( count!=a[i])
     {
-      isSelf=false;
       return 0;
     }
   }
@@ -54,14 +51,14 @@ int main()
   int h[]={6, 2, 1, 0, 0, 0, 1, 0, 1, 0};
   cout<<isSelfReferential(h,sizeof(h)/sizeof(int))<<endl;
   /*
-   1
-   1
-   1
-   1
-   1
-   1
-   1
-   0
-   */
+     1
+     1
+     1
+     1
+     1
+     1
+     1
+     0
+     */
   return 0;
 }
