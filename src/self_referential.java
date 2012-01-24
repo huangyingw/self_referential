@@ -1,6 +1,6 @@
 /**
  * @author huangyingw
- *
+ * 
  */
 public class self_referential {
 	static int isSelfReferential(int a[]) {
